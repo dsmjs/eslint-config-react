@@ -15,11 +15,13 @@
   "author": "dsmJS <maintainers@dsmjs.com> (https://dsmjs.com)",
   "scripts": {
     "test": "npm-run-all --print-label --parallel lint:*",
+    "lint:js": "eslint . --cache",
     "lint:md": "remark . --frail",
     "lint:sensitive": "ban",
     "lint:travis": "travis-lint .travis.yml"
   },
   "devDependencies": {
+    "@dsmjs/eslint-config": "1.0.1",
     "@form8ion/commitlint-config": "^1.0.3",
     "@form8ion/remark-lint-preset": "^1.0.0",
     "ban-sensitive-files": "^1.9.2",

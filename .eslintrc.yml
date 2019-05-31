@@ -1,1 +1,3 @@
-extends: '@dsmjs'
+extends:
+  - '@dsmjs'
+  - ./index.js

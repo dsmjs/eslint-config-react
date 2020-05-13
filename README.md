@@ -32,7 +32,6 @@ $ npm install @dsmjs/eslint-config-react --save-dev
 [![Commitizen friendly][commitizen-badge]][commitizen-link]
 [![semantic-release][semantic-release-badge]][semantic-release-link]
 [![PRs Welcome][PRs-badge]][PRs-link]
-[![Greenkeeper badge](https://badges.greenkeeper.io/dsmjs/eslint-config-react.svg)](https://greenkeeper.io/)
 [![Dependabot][dependabot-badge]][dependabot-link]
 
 <!--contribution-badges end -->

@@ -4,3 +4,4 @@ repository:
   description: Shareable config for ESLint for React components
   homepage: 'https://npm.im/@dsmjs/eslint-config-react'
   private: false
+  topics: hacktoberfest

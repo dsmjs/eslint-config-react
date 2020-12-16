@@ -5,7 +5,7 @@ for [ESLint](https://eslint.org) for [React](https://reactjs.org) components
 
 <!--status-badges start -->
 
-[![Build Status][ci-badge]][ci-link]
+[![Node CI Workflow Status][github-actions-ci-badge]][github-actions-ci-link]
 
 <!--status-badges end -->
 
@@ -57,10 +57,6 @@ $ npm test
 
 [license-badge]: https://img.shields.io/github/license/dsmjs/eslint-config-react.svg
 
-[ci-link]: https://travis-ci.com/dsmjs/eslint-config-react
-
-[ci-badge]: https://img.shields.io/travis/com/dsmjs/eslint-config-react/master.svg
-
 [commit-convention-link]: https://conventionalcommits.org
 
 [commit-convention-badge]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg
@@ -80,3 +76,7 @@ $ npm test
 [dependabot-link]: https://dependabot.com/
 
 [dependabot-badge]: https://badgen.net/dependabot/dsmjs/eslint-config-react/?icon=dependabot
+
+[github-actions-ci-link]: https://github.com/dsmjs/eslint-config-react/actions?query=workflow%3A%22Node.js+CI%22+branch%3Amaster
+
+[github-actions-ci-badge]: https://github.com/dsmjs/eslint-config-react/workflows/Node.js%20CI/badge.svg

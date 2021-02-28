@@ -20,7 +20,7 @@
     "lint:sensitive": "ban"
   },
   "devDependencies": {
-    "@dsmjs/eslint-config": "1.0.63",
+    "@dsmjs/eslint-config": "1.0.64",
     "@form8ion/commitlint-config": "^1.0.6",
     "@form8ion/remark-lint-preset": "^1.0.1",
     "ban-sensitive-files": "^1.9.2",

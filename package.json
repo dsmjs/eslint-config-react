@@ -21,7 +21,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@dsmjs/babel-preset": "1.0.104",
+    "@dsmjs/babel-preset": "1.0.105",
     "@dsmjs/eslint-config": "1.0.102",
     "@form8ion/commitlint-config": "^1.0.6",
     "@form8ion/remark-lint-preset": "^3.0.0",

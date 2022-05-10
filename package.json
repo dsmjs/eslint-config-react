@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@dsmjs/babel-preset": "1.0.105",
-    "@dsmjs/eslint-config": "1.0.102",
+    "@dsmjs/eslint-config": "1.0.103",
     "@form8ion/commitlint-config": "^1.0.6",
     "@form8ion/remark-lint-preset": "^4.0.0",
     "ban-sensitive-files": "^1.9.2",

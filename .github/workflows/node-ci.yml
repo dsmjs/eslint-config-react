@@ -5,7 +5,7 @@ name: Node.js CI
       - master
       - alpha
       - beta
-      - dependabot/**
+      - 'dependabot/**'
   pull_request:
     types:
       - opened
@@ -17,38 +17,36 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Read .nvmrc
-        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-        id: nvm
+      - uses: actions/checkout@v3
       - name: Setup node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: ${{ steps.nvm.outputs.NVMRC }}
-      - uses: bahmutov/npm-install@v1
+          node-version-file: '.nvmrc'
+          cache: npm
+      - run: npm clean-install
       - run: npm test
+      - name: Upload coverage data to Codecov
+        run: 'npm run coverage:report'
   release:
     needs: verify
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Read .nvmrc
-        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-        id: nvm
+      - uses: actions/checkout@v3
       - name: Setup node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: ${{ steps.nvm.outputs.NVMRC }}
-      - uses: bahmutov/npm-install@v1
+          node-version-file: '.nvmrc'
+          cache: npm
+      - run: npm clean-install
       - name: semantic-release
         run: npx semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+          NPM_TOKEN: '${{ secrets.NPM_PUBLISH_TOKEN }}'
   automerge:
     needs: release
     runs-on: ubuntu-latest
     steps:
-      - uses: fastify/github-action-merge-dependabot@v2.2.0
+      - uses: fastify/github-action-merge-dependabot@v3
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_PAT }}

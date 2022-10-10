@@ -32,6 +32,6 @@
     "remark-cli": "^11.0.0"
   },
   "dependencies": {
-    "@form8ion/eslint-config-react": "1.16.2"
+    "@form8ion/eslint-config-react": "1.16.3"
   }
 }

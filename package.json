@@ -23,7 +23,7 @@
   "devDependencies": {
     "@dsmjs/babel-preset": "1.0.113",
     "@dsmjs/eslint-config": "1.0.118",
-    "@form8ion/remark-lint-preset": "^4.0.0",
+    "@form8ion/remark-lint-preset": "^5.0.0",
     "ban-sensitive-files": "^1.9.2",
     "commitlint-config-dsmjs": "1.0.51",
     "cz-conventional-changelog": "^3.0.2",
